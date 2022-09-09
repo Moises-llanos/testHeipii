@@ -1,0 +1,99 @@
+
+@import '../../style/styles.scss';
+
+.log {
+    height: 100vh;
+    overflow: hidden;
+
+    .log__img {
+        box-shadow: $box-shadow;
+        border: 1px solid $color-log-img;
+        background-color: $color-log-img;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        height: 45%;
+
+        img {
+            height: 70%;
+            width: 100%;
+        }
+    }
+
+    
+    .details {
+        box-shadow: $box-shadow;
+        backdrop-filter: blur(0.7rem);
+        border: 1px solid $color-log;
+        background-color: $color-log;
+        border-radius: 20px;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        margin-top: -100px;
+
+        .details__content {
+            width: 100%;
+
+            .content__img {
+                width: 100%;
+                height: 150px;
+    
+                img {
+                    height: inherit;
+                    width: 200px;
+                }
+            }
+
+            .email {
+                width: 100%;
+                position: relative;
+
+                small {
+                    position: absolute;
+                    bottom: -8px;
+                    left: 0;
+                }
+            }
+
+            .password {
+               @extend .email;
+            }
+
+            .btn {
+                height: 40px;
+                border: 1px solid $color-log-img;
+                background-color: $color-log-img;
+                border-radius: 5px;
+                margin: 30px 0;
+                padding: 10px;
+                color: $light-color;
+                transition: 500ms;
+                
+                &:hover {
+                    transform: scale(1.03);
+                    box-shadow: $box-shadow;
+                }
+            }
+
+            .btn__disabled {
+                @extend .btn;
+                opacity: .5;
+            }
+
+
+        }
+        
+    }
+}
+
+
+:host::ng-deep {
+
+    .p-inputtext {
+        border: none;
+        margin: 10px 0;
+    }
+
+    
+}

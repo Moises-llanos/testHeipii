@@ -1,0 +1,25 @@
+@import '../style/styles.scss';
+
+.dashboard {
+
+
+    .dashboard__search {
+        width: 100%;
+        height: 20vh;
+        background-color: $color-log-img;
+        padding: 10px;
+
+        .search {
+            width: 100%;
+        }
+    }
+
+    .list__users {
+        
+        .users {
+            width: 90%;
+            background-color: red;
+            height: 40px;
+        }
+    }
+}

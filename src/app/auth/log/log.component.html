@@ -1,0 +1,32 @@
+
+<form class="log" [formGroup]="formBuild">
+
+    <div class="log__img  animate__animated animate__fadeInDown">
+        <img src="assets/img/login.svg" class="animate__animated animate__fadeInLeft" alt="">
+    </div>
+
+    <div class="details flex__center animate__animated animate__fadeInUp">
+        <div class="details__content">
+            <div class="content__img flex__center animate__animated animate__fadeInRight">
+                <img src="assets/img/heipii.png">
+            </div>
+            <div class="title">
+                <p>Bienvenido de nuevo</p>
+                <p>Esto es un test para heipii</p>
+            </div>
+            <div class="email">
+                <input pInputText formControlName="email" placeholder="Enter username" type="text">
+                <small errorMsg *ngIf="fieldEmailError"></small>
+            </div>
+            <div class="password">
+                <input pPassword type="password"  formControlName="password" placeholder="Password">
+                <small errorMsg *ngIf="fieldPasswordError"></small>
+            </div>
+            <div 
+                [class]="formValid ? 'btn' : 'btn__disabled'"
+                (click)="log()"
+                >Iniciar Sesion</div>
+        </div>
+    </div>
+
+</form>

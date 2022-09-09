@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "source sans pro";
+}
+
+
+
+
+body {
+    background-color: #E0E1EA;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Fjalla one";
+    color: #383348;
+}
+
+
+
+input {
+    width: 100%;
+}
+
+.flex__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
