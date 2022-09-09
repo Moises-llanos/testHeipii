@@ -15,11 +15,18 @@
     }
 
     .list__users {
-        
+        position: relative;
+        margin-top: -40px;
+
         .users {
-            width: 90%;
-            background-color: red;
-            height: 40px;
+            position: relative;
+            width: 95%;
+            background-color: $color-log-img;
+            box-shadow: $box-shadow;
+            height: 60px;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 5px;
         }
     }
 }
