@@ -1,18 +1,44 @@
 
 
-<div class="dashboard">
+ <router-outlet *ngIf="hasUrl else users"></router-outlet>
+ 
+ <ng-template #users>
+     <div class="dashboard">
+        <app-toolbar
+            messagesBottom="Lista de Users"
+            messagesRight="Total Posts {{totalListPost}}"
+            messagesleft="Total Users {{ listUsers.length }}"
+        ></app-toolbar>
+         
+         <div class="list__users">
+                 <div 
+                     class="users animate__animated animate__fadeInUp" 
+                     *ngFor="let user of listUsers"
+                     [routerLink]="['./user', user.id]"
+                     >
+                     <div class="users__avatar flex__center">
+                         <i class="pi pi-user"></i>
+                     </div>
+                     <div class="users__details">
+                         <div class="name user__item name__item">
+                             <small>{{user.name}}</small>
+                         </div>
+                         <div class="email flex__center user__item email__item">
+                             <i class="pi pi-at at"></i>
+                             <small>{{user.email}}</small>
+                         </div>
+                         <div class="city flex__center user__item city__item">
+                             <i class="pi pi-map-marker address"></i>
+                             <small>{{user.address.city}}</small>
+                         </div>
+                         <div class="contact flex__center user__item contact__item">
+                             <i class="pi pi-phone phone"></i>
+                             <small>{{user.phone}}</small>    
+                         </div>
+                     </div>
+                 </div>
+         </div>
+     </div>
+ </ng-template>
+ 
 
-    <div class="dashboard__search flex__center">
-        <div class="p-input-icon-left search">
-            <i class="pi pi-search"></i>
-            <input type="text" pInputText placeholder="Search"  />
-        </div>
-    </div>
-    <div class="list__users">
-        <div class="users" *ngFor="let item of [1,1,1,1,1,1,1,]">
-
-        </div>
-    </div>
-
-
-</div>

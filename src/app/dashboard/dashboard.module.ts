@@ -4,8 +4,6 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { SharedModule } from "../shared/shared.module";
 import { PrimeNgModule } from '../primeng/primeng.module';
 
-
-
 @NgModule({
     declarations: [
         DashboardComponent

@@ -1,15 +1,13 @@
 
-import { NgModule } from '@angular/core';
 import {InputTextModule} from 'primeng/inputtext';
-import {ButtonModule} from 'primeng/button';
 import {PasswordModule} from 'primeng/password';
+import { NgModule } from '@angular/core';
 
 
 @NgModule({
     exports: [
         InputTextModule,
-        ButtonModule,
-        PasswordModule
+        PasswordModule,
     ]
 })
 

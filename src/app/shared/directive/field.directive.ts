@@ -1,6 +1,5 @@
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
-
 @Directive({
     selector: '[errorMsg]'
 })

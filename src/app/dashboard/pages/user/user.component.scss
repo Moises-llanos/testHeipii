@@ -1,0 +1,101 @@
+@import '../../../style/styles.scss';
+
+.profile  {
+    overflow: hidden;
+    
+    .profile__avatar {
+        text-align: center;
+        margin: 20px 0;
+        
+        .avatar {
+            margin: 20px auto;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            outline: 5px dashed $color-log-img;
+            background-color: $color-avatar;
+            box-shadow: $box-shadow;
+            i {
+                font-size: 4rem;
+                color: rgb(200, 193, 193);
+            }
+        }
+
+        .icon__phone {
+            i {
+                margin-right: 10px;
+                color: $color-log-img;
+                
+            }
+        }
+    }
+
+
+    .list__albums {
+
+        .list__avatar {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin: 10px auto;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 18px;
+            line-height: 25px;
+            background-color: $post-color;
+
+            .avatar__icon {
+                margin: 0 10px;
+                color: $light-color;
+                
+            }
+        }
+
+        .albums {
+            color: #949AA0;
+            height: calc(100vh - 470px);
+            overflow-y: auto;
+
+            .albums__item {
+                display: flex;
+                align-items: center;
+                margin: 10px 20px;
+                
+
+                .icon {
+                    height: 25px;
+                    width: 25px;
+                    min-width: 25px;
+                    border-radius: 50%;
+                    background-color: $color-log-img;
+                    margin: 0 10px;
+                    color: $light-color;
+                    transform: rotate(200deg);
+                }
+
+                .album__title {
+                    background-color: #f6f6f6;
+                    color: #949AA0;
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .logout {
+        justify-content: flex-start;
+        align-items: center;
+        color: #949AA0;
+        display: flex;
+        height: 60px;
+
+        i {
+            font-size: 20px;
+            margin: 0 20px;
+            transform: rotate(180deg);
+        }
+    }
+        
+}
+

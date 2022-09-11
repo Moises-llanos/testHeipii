@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import './app/style/styles.scss';
 
 * {
     margin: 0;
@@ -7,21 +8,30 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: "source sans pro";
+    font-family: $font-family-body;
+    letter-spacing: 1px;
 }
-
-
 
 
 body {
-    background-color: #E0E1EA;
+    background-color: $color-body;
+    height: 100vh;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: "Fjalla one";
-    color: #383348;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family-h1-h6;
+    color: color-h1-h6;
+    font-weight: 400;
 }
 
+strong {
+    font-size: 13px;
+}
 
 
 input {
@@ -33,3 +43,4 @@ input {
     align-items: center;
     justify-content: center;
 }
+

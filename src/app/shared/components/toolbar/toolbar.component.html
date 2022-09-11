@@ -1,0 +1,20 @@
+<div class="details">
+    <div class="total__details">
+        <div class="total__users animate__animated animate__fadeInLeft flex__center" >
+            <div class="total__icon" (click)="getList()">
+                <i [class]="hasMessageLeft ?  'pi pi-user' : 'pi pi-chevron-left'"></i>
+                <strong>{{hasMessageLeft ? messagesleft : 'Ir al Listado'}}</strong>
+            </div>
+        </div>
+        <div class="total__post animate__animated animate__fadeInRight flex__center">
+            <div class="total__icon">
+                <i class="pi pi-comments"></i>
+                <strong> {{messagesRight}}</strong>
+            </div>
+        </div>
+    </div>
+    <div class="list__icon animate__animated animate__fadeInDown">
+        <i class="pi pi-user"></i>
+        <strong>{{messagesBottom}}</strong>
+    </div>
+</div>

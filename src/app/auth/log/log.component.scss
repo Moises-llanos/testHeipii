@@ -18,7 +18,6 @@
             width: 100%;
         }
     }
-
     
     .details {
         box-shadow: $box-shadow;
@@ -80,13 +79,9 @@
                 @extend .btn;
                 opacity: .5;
             }
-
-
         }
-        
     }
 }
-
 
 :host::ng-deep {
 
@@ -95,5 +90,9 @@
         margin: 10px 0;
     }
 
-    
+    .p-password {
+        position: relative;
+        display: inline-flex;
+        width: 100%;
+    }
 }

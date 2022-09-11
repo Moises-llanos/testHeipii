@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CoreGuard } from './core/guard/guard.guard';
+import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
@@ -9,8 +10,10 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    title: 'dashboard',
-    loadChildren: ()=> import('./dashboard/dashboard.module').then(m=> m.DashboardModule)
+    title: 'Dashboard',
+    loadChildren: ()=> import('./dashboard/dashboard.module').then(m=> m.DashboardModule),
+    canActivate: [CoreGuard],
+    canLoad: [CoreGuard]
   },
   {
     path: '**',

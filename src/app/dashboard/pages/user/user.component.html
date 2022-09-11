@@ -1,0 +1,43 @@
+
+<div class="profile">
+    <app-toolbar
+    [hasMessageLeft]="false"
+    messagesRight="{{'Total Post ' +  totalPostsUsers}}"
+    messagesBottom="Perfil"
+    ></app-toolbar>
+    <div class="profile__avatar animate__animated animate__fadeInDown">
+        <div class="avatar flex__center">
+            <i class="pi pi-user"></i>
+        </div>
+        <h2>{{user.name}}</h2>
+        <div class="icon__phone">
+            <i class="pi pi-phone"></i>
+            <small>{{user.phone}}</small>
+        </div>
+    </div>
+    <div class="list__albums">
+        <div class="list__avatar animate__animated animate__fadeInUp">
+            <div class="avatar__icon flex__center">
+                <i class="pi pi-list"></i>
+            </div>
+            <small>Lista de album de {{user.username}}</small>
+        </div>
+        <div class="albums">
+            <div class="albums__item animate__animated animate__fadeInUp" *ngFor="let album of listAlbums">
+                <div class="icon flex__center">
+                    <i class="pi pi-comment"></i>
+                </div>
+                <div class="album__title">
+                    <p>{{album.title + '...'}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div 
+    class="logout animate__animated animate__fadeInUp"
+    (click)="logOut()"
+    >
+        <i class="pi pi-sign-out"></i>
+        <strong>Cerrar Sesión</strong>
+    </div>
+</div>

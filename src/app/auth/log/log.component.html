@@ -2,7 +2,7 @@
 <form class="log" [formGroup]="formBuild">
 
     <div class="log__img  animate__animated animate__fadeInDown">
-        <img src="assets/img/login.svg" class="animate__animated animate__fadeInLeft" alt="">
+        <img src="assets/img/login.svg" class="animate__animated animate__fadeInLeft">
     </div>
 
     <div class="details flex__center animate__animated animate__fadeInUp">
@@ -10,18 +10,34 @@
             <div class="content__img flex__center animate__animated animate__fadeInRight">
                 <img src="assets/img/heipii.png">
             </div>
-            <div class="title">
-                <p>Bienvenido de nuevo</p>
-                <p>Esto es un test para heipii</p>
-            </div>
+         
             <div class="email">
-                <input pInputText formControlName="email" placeholder="Enter username" type="text">
-                <small errorMsg *ngIf="fieldEmailError"></small>
+                <input 
+                    pInputText 
+                    formControlName="email" 
+                    placeholder="Enter username" 
+                    type="text"
+                >
+                <small errorMsg *ngIf="emailError"></small>
             </div>
+
             <div class="password">
-                <input pPassword type="password"  formControlName="password" placeholder="Password">
-                <small errorMsg *ngIf="fieldPasswordError"></small>
+                <input 
+                    pPassword 
+                    [feedback]="false" 
+                    formControlName="password"
+                    placeholder="Password"
+                    (keyup.enter)="log()"
+                    >
+                <small errorMsg *ngIf="passwordError"></small>
             </div>
+
+            <p 
+                *ngIf="isValidUser"
+                errorMsg 
+                message="¡Ups El Usuario Ingresado es Invalido!"
+                class="animate__animated animate__shakeX"
+                ></p>
             <div 
                 [class]="formValid ? 'btn' : 'btn__disabled'"
                 (click)="log()"
